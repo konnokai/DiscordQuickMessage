@@ -89,7 +89,6 @@ namespace DiscordQuickMessage
                 // extract the data from the button's ID
                 string[] data = x.Data.CustomId.Split('_');
 
-
                 // get the channel of the original message
                 SocketTextChannel? channel = await client.GetChannelAsync(ulong.Parse(data[0])) as SocketTextChannel;
                 if (channel == null)
@@ -207,6 +206,9 @@ namespace DiscordQuickMessage
         private async Task HandleSendResponses(SocketMessage x)
         {
             SocketTextChannel channel = (SocketTextChannel)x.Channel;
+
+            Console.WriteLine($"{channel.Guild} - {channel} | {x.Author} | {x.Content}");
+
             // build the embed that gets sent to each mentioned user
             EmbedBuilder eb = new EmbedBuilder()
             {
@@ -301,7 +303,8 @@ namespace DiscordQuickMessage
                 // we don't need a very big cache size for our purposes
                 MessageCacheSize = 10,
                 // Discord permission stuff
-                GatewayIntents = GatewayIntents.AllUnprivileged | GatewayIntents.MessageContent | GatewayIntents.GuildMembers
+                GatewayIntents = GatewayIntents.AllUnprivileged | GatewayIntents.MessageContent | GatewayIntents.GuildMembers,
+                FormatUsersInBidirectionalUnicode = false
             });
 
             // Dependency Injection stuff which is utilized by the library
