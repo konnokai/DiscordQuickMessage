@@ -37,3 +37,8 @@ You will also need to create a bot on the Discord Developer page as well as crea
 2. Click the corresponding number to the response you would like to send. You can also click "Ignore" to ignore the response or "Original Message" to jump to the original message.
 3. After choosing a response, the bot will have you confirm your selection. Click "Yes" to send the message or "No" to start over.
 4. If "Yes" is selected, the bot will send the corresponding response in the channel you were mentioned in.
+
+# Todo
+-
+- 預設不觸發回應，使用指令讓使用者切換啟用狀態並使用SQLite保存
+- 將回應按鈕的CustomId加入GUID亂數，且直接從Embed抓取回應
