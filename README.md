@@ -4,25 +4,7 @@ Semester long group project for Software Engineering II at UML
 The Discord Quick Message is a Discord bot that allows the user to easily reply to Discord mentions, without having to spend time thinking and typing a response back to the user, especially if they are busy and cannot respond effectively. When a user is mentioned in a server by another user, it will utilize OpenAI to generate a positive, neutral, and negative response, and display the answers to the mentioned user, allowing them to pick a response. Once a response is confirmed, it will automatically reply to the original user with the chosen response.
 
 # Requirements
-*All libraries can be found on NuGet*
-
-Discord.Net >= 3.9.0
-
-Microsoft.Extensions.DependencyInjection >= 7.0.0
-
-OpenAI >= 1.6.0
-
-Unit Test Libraries:
-
-Microsoft.NET.Test.Sdk >= 16.11.0
-
-MSTest.TestAdapter >= 2.2.7
-
-MSTest.TestFramework >= 2.2.7
-
-coverlet.collector >= 3.1.0
-
-You will also need to create a bot on the Discord Developer page as well as create a profile on OpenAI's website to acquire an API token from each. This is necessary for later steps.
+Create a bot on the Discord Developer page as well as create a profile on OpenAI's website to acquire an API token from each. This is necessary for later steps.
 
 # How to Run
 1. Clone the respository and open the .sln file in Visual Studio 2022.
