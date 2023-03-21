@@ -39,6 +39,5 @@ You will also need to create a bot on the Discord Developer page as well as crea
 4. If "Yes" is selected, the bot will send the corresponding response in the channel you were mentioned in.
 
 # Todo
--
 - 預設不觸發回應，使用指令讓使用者切換啟用狀態並使用SQLite保存
 - 將回應按鈕的CustomId加入GUID亂數，且直接從Embed抓取回應
